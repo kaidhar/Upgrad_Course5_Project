@@ -44,6 +44,10 @@ public class QuestionEditService {
 
         else
         {
+            questionEntity.setUser(questionEditEntity.getUser());
+            questionEntity.setCreated_at(questionEditEntity.getCreated_at());
+            questionEntity.setUuid(questionEditEntity.getUuid());
+            questionEntity.setId(questionEditEntity.getId());
             questionDao.editQuestion(questionEntity);
         }
 

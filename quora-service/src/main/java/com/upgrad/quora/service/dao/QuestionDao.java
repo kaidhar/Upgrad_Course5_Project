@@ -49,15 +49,17 @@ public class QuestionDao {
 
     }
 
-    public void editQuestion(QuestionEntity questionEntity) {
+    public QuestionEntity editQuestion(QuestionEntity questionEntity) {
 
-
-        entityManager.createNamedQuery("editQuestion").setParameter("uuid", questionEntity.getUuid()).setParameter("content", questionEntity.getContent());
+        return entityManager.merge(questionEntity);
+        //entityManager.createNamedQuery("editQuestion").setParameter("uuid", questionEntity.getUuid()).setParameter("content", questionEntity.getContent());
 
     }
 
     public void deleteQuestion(QuestionEntity questionEntity) {
-        entityManager.createNamedQuery("deleteQuestion").setParameter("uuid", questionEntity.getUuid());
+        //entityManager.createNamedQuery("deleteQuestion").setParameter("uuid", questionEntity.getUuid())
+        entityManager.merge(questionEntity);
+        entityManager.remove(questionEntity);
 
     }
 

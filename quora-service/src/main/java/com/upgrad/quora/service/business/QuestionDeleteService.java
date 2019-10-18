@@ -43,7 +43,7 @@ public class QuestionDeleteService {
 
         else
         {
-            questionDao.deleteQuestion(questionEntity);
+            questionDao.deleteQuestion(questionEditEntity);
         }
 
         return questionEditEntity;

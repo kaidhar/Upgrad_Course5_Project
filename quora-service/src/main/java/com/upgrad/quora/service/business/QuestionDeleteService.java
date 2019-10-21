@@ -30,7 +30,7 @@ public class QuestionDeleteService {
 
         questionEntity.setUser(userAuthTokenEntity.getUser());
 
-        QuestionEntity questionEditEntity  = questionDao.getQuestion(questionEntity.getUuid());
+        QuestionEntity questionEditEntity  = questionDao.getQuestionByQUuid(questionEntity.getUuid());
 
         if (questionEditEntity == null) {
             throw new InvalidQuestionException("QUES-001", "Entered question uuid does not exist");

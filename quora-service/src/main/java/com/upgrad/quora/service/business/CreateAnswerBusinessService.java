@@ -1,6 +1,9 @@
 package com.upgrad.quora.service.business;
 
+<<<<<<< HEAD
 import com.upgrad.quora.service.common.EndPointIdentifier;
+=======
+>>>>>>> 82632bb4550a45568c2a3f99160a8d1dc4201f75
 import com.upgrad.quora.service.dao.AnswerDao;
 import com.upgrad.quora.service.dao.QuestionDao;
 import com.upgrad.quora.service.dao.UserDao;
@@ -18,7 +21,11 @@ import java.time.ZonedDateTime;
 import java.util.UUID;
 
 @Service
+<<<<<<< HEAD
 public class CreateAnswerBusinessService implements EndPointIdentifier {
+=======
+public class CreateAnswerBusinessService {
+>>>>>>> 82632bb4550a45568c2a3f99160a8d1dc4201f75
 
     @Autowired
     AnswerDao answerDao;
@@ -50,7 +57,11 @@ public class CreateAnswerBusinessService implements EndPointIdentifier {
         }
 
         // Validate if requested question exist
+<<<<<<< HEAD
         QuestionEntity questionEntity = questionDao.getQuestionById(questionId);
+=======
+        QuestionEntity questionEntity = questionDao.getQuestionByQUuid(questionId);
+>>>>>>> 82632bb4550a45568c2a3f99160a8d1dc4201f75
         if (questionEntity == null) {
             throw new InvalidQuestionException("QUES-001", "The question entered is invalid");
         }

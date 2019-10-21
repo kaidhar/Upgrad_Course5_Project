@@ -55,8 +55,14 @@ public class EditQuestionContentBusinessService {
 
         questionEntity.setId(existingQuestionEntity.getId());
         questionEntity.setUser(existingQuestionEntity.getUser());
+<<<<<<< HEAD
         questionEntity.setDate(existingQuestionEntity.getDate());
 
         return questionDao.updateQuestion(questionEntity);
+=======
+        questionEntity.setCreated_at(existingQuestionEntity.getCreated_at());
+
+        return questionDao.editQuestion(questionEntity);
+>>>>>>> 82632bb4550a45568c2a3f99160a8d1dc4201f75
     }
 }

@@ -1,6 +1,9 @@
 package com.upgrad.quora.service.business;
 
+<<<<<<< HEAD
 import com.upgrad.quora.service.common.EndPointIdentifier;
+=======
+>>>>>>> 82632bb4550a45568c2a3f99160a8d1dc4201f75
 import com.upgrad.quora.service.dao.UserDao;
 import com.upgrad.quora.service.entity.UserAuthTokenEntity;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +15,11 @@ import java.time.ZonedDateTime;
  * Method to provide service for validating a user authentication token through a access token
  */
 @Service
+<<<<<<< HEAD
 public class UserAuthTokenValidifierService implements EndPointIdentifier {
+=======
+public class UserAuthTokenValidifierService {
+>>>>>>> 82632bb4550a45568c2a3f99160a8d1dc4201f75
 
 
     @Autowired

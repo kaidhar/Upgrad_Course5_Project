@@ -46,6 +46,11 @@ public class GetAllQuestionsByUserBusinessService {
             throw new UserNotFoundException("USR-001", "User with entered uuid whose question details are to be seen does not exist");
         }
 
+<<<<<<< HEAD
         return questionDao.getAllQuestionsByUser(userId);
+=======
+        return questionDao.getAllQuestionsByUserId(userId) ;
+
+>>>>>>> 82632bb4550a45568c2a3f99160a8d1dc4201f75
     }
 }

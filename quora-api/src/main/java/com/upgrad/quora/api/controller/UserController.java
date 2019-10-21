@@ -76,7 +76,13 @@ public class UserController {
         String[] authorizationArray = authorization.split("Basic ");
         byte[] decode = Base64.getDecoder().decode(authorizationArray[1]);
         String decodedText = new String(decode);
+<<<<<<< HEAD
         String[] authArray = decodedText.split(":");
+=======
+          String[] authArray = decodedText.split(":");
+
+
+>>>>>>> 82632bb4550a45568c2a3f99160a8d1dc4201f75
 
         UserAuthTokenEntity userAuthToken = signinBusinessService.authenticate(authArray[0], authArray[1]);
         UserEntity user = userAuthToken.getUser();

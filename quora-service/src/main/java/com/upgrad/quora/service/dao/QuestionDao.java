@@ -95,7 +95,7 @@ public class QuestionDao {
 }
 =======
 
-    public QuestionEntity getQuestion(final String uuid) {
+    public QuestionEntity getQuestionByQUuid(final String uuid) {
 
         try {
             return entityManager.createNamedQuery("oneQuestion", QuestionEntity.class).setParameter("uuid", uuid).getSingleResult();

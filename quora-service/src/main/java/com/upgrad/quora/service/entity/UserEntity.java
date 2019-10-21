@@ -13,7 +13,12 @@ import java.io.Serializable;
 @Entity
 @Table(name = "USERS")
 @NamedQueries({
-        @NamedQuery(name = "userByEmail", query = "select u from UserEntity u where u.email = :email")
+        @NamedQuery(name = "userByEmail", query = "select u from UserEntity u where u.email = :email"),
+        @NamedQuery(name = "userByUserName", query = "select u from UserEntity u where u.userName = :userName"),
+        @NamedQuery(name ="userByUuid",query="select u from UserEntity u where u.uuid =:uuid"),
+        @NamedQuery(name ="userByRole",query="select u from UserEntity u where u.role=:role"),
+        @NamedQuery(name = "authenticateUserQuery", query = "select u from UserEntity u where u.userName= :userName and u.password= :password")
+
 })
 public class UserEntity implements Serializable {
 

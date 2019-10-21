@@ -4,6 +4,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+<<<<<<< HEAD
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+=======
+>>>>>>> 1bdc0adf8f7ffabde15e7800110ddec0071f776e
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -12,15 +17,33 @@ import java.io.Serializable;
 import java.time.ZonedDateTime;
 
 @Entity
+<<<<<<< HEAD
+@Table(name = "user_auth")
+@NamedQueries({
+        @NamedQuery(name = "userAuthTokenByAccessToken", query = "select ut from UserAuthTokenEntity ut where ut.accessToken = :accessToken "),
+        @NamedQuery(name="UserByUserUuid",query ="select ut from UserAuthTokenEntity ut where ut.id =:uuid"),
+        @NamedQuery(name="userAuthTokenByUuid",query="select ut from UserAuthTokenEntity ut where ut.uuid = :uuid")
+=======
 @Table(name = "USER_AUTH")
 @NamedQueries({
         @NamedQuery(name = "userAuthTokenByAccessToken", query = "select ut from UserAuthTokenEntity ut where ut.accessToken =:accessToken")
+>>>>>>> 1bdc0adf8f7ffabde15e7800110ddec0071f776e
 })
 public class UserAuthTokenEntity implements Serializable {
 
     @Id
     @Column(name = "ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+<<<<<<< HEAD
+    private Integer id;
+
+    @Column(name = "UUID")
+    @Size(max = 200)
+    private String uuid;
+
+    @ManyToOne
+    @OnDelete(action = OnDeleteAction.CASCADE)
+=======
     private long id;
 
     @Column(name = "UUID")
@@ -28,6 +51,7 @@ public class UserAuthTokenEntity implements Serializable {
     private String uuid;
 
     @ManyToOne
+>>>>>>> 1bdc0adf8f7ffabde15e7800110ddec0071f776e
     @JoinColumn(name = "USER_ID")
     private UserEntity user;
 
@@ -44,6 +68,27 @@ public class UserAuthTokenEntity implements Serializable {
     @NotNull
     private ZonedDateTime expiresAt;
 
+<<<<<<< HEAD
+    @Column(name = "LOGOUT_AT")
+    private ZonedDateTime logoutAt;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getUuid() {
+        return uuid;
+    }
+
+    public void setUuid(String uuid) {
+        this.uuid = uuid;
+    }
+
+=======
     public String getUuid() {
         return uuid;
     }
@@ -64,6 +109,7 @@ public class UserAuthTokenEntity implements Serializable {
         this.id = id;
     }
 
+>>>>>>> 1bdc0adf8f7ffabde15e7800110ddec0071f776e
     public UserEntity getUser() {
         return user;
     }
@@ -118,4 +164,8 @@ public class UserAuthTokenEntity implements Serializable {
     public String toString() {
         return ToStringBuilder.reflectionToString(this, ToStringStyle.MULTI_LINE_STYLE);
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 1bdc0adf8f7ffabde15e7800110ddec0071f776e

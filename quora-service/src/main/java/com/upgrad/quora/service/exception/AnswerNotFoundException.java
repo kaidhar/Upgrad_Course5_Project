@@ -39,4 +39,3 @@ public class AnswerNotFoundException extends Exception {
     }
 
 }
-

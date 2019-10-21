@@ -39,4 +39,3 @@ public class InvalidQuestionException extends Exception {
     }
 
 }
-

@@ -1,9 +1,5 @@
 package com.upgrad.quora.service.business;
 
-<<<<<<< HEAD
-import com.upgrad.quora.service.common.EndPointIdentifier;
-=======
->>>>>>> 82632bb4550a45568c2a3f99160a8d1dc4201f75
 import com.upgrad.quora.service.dao.QuestionDao;
 import com.upgrad.quora.service.dao.UserDao;
 import com.upgrad.quora.service.entity.QuestionEntity;
@@ -15,11 +11,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-<<<<<<< HEAD
-public class GetAllQuestionsBusinessService implements EndPointIdentifier {
-=======
 public class GetAllQuestionsBusinessService {
->>>>>>> 82632bb4550a45568c2a3f99160a8d1dc4201f75
 
     @Autowired
     private QuestionDao questionDao;

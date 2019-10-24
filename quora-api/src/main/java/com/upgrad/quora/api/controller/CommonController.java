@@ -41,9 +41,4 @@ public class CommonController {
         return new ResponseEntity < UserDetailsResponse > (userDetailsResponse, HttpStatus.OK);
     }
 
-<<<<<<< HEAD
 }
-© 2019 Git
-=======
-}
->>>>>>> 82632bb4550a45568c2a3f99160a8d1dc4201f75
